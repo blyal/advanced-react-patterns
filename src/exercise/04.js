@@ -22,7 +22,7 @@ function useToggle() {
   const togglerProps = {'aria-pressed': on, onClick: toggle}
 
   // Extra Credit function: prop getters
-  const getTogglerProps = ({onClick, ...props}) => {
+  const getTogglerProps = ({onClick, ...props} = {}) => {
     return {
       'aria-pressed': on,
       onClick: callAll(onClick, toggle),
